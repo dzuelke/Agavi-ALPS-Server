@@ -15,6 +15,16 @@
 				</route>
 			</route>
 			
+			<route name="users" pattern="^/users" module="Users">
+				<route name=".index" pattern="^/$" action="Index" />
+				<route name=".create" pattern="^/create$" action="Create" />
+				<route name=".user" pattern="^/(id:\d+)" action="User">
+					<route name=".view" pattern="^$" action=".Show" />
+					<route name=".edit" pattern="^/edit$" action=".Edit" />
+					<route name=".delete" pattern="^/delete$" action=".Delete" />
+				</route>
+			</route>
+			
 		</routes>
 	</ae:configuration>
 </ae:configurations>
