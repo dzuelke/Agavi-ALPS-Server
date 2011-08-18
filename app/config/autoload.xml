@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns="http://agavi.org/agavi/config/parts/autoload/1.0" xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" parent="%core.system_config_dir%/autoload.xml">
+	
+	<ae:configuration>
+		
+		<autoload name="AlpsmicroblogBaseAction">%core.lib_dir%/action/AlpsmicroblogBaseAction.class.php</autoload>
+		<autoload name="AlpsmicroblogBaseModel">%core.lib_dir%/model/AlpsmicroblogBaseModel.class.php</autoload>
+		<autoload name="AlpsmicroblogBaseView">%core.lib_dir%/view/AlpsmicroblogBaseView.class.php</autoload>
+		
+	</ae:configuration>
+	
+</ae:configurations>
