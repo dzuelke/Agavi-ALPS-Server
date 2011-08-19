@@ -6,7 +6,7 @@ class Messages_IndexSuccessView extends AlpsmicroblogMessagesBaseView
 	{
 		$this->setupHtml($rd);
 		
-		$this->setAttribute('_title', 'Index');
+		$this->setAttribute('_title', 'Messages');
 	}
 }
 
