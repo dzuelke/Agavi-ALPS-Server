@@ -7,6 +7,9 @@
 		<autoload name="AlpsmicroblogBaseModel">%core.lib_dir%/model/AlpsmicroblogBaseModel.class.php</autoload>
 		<autoload name="AlpsmicroblogBaseView">%core.lib_dir%/view/AlpsmicroblogBaseView.class.php</autoload>
 		
+		<autoload name="Message">%core.model_dir%/Message.php</autoload>
+		<autoload name="User">%core.model_dir%/User.php</autoload>
+		
 	</ae:configuration>
 	
 </ae:configurations>

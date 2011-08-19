@@ -2,28 +2,25 @@
 <ae:configurations xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" xmlns="http://agavi.org/agavi/config/parts/databases/1.0">
 	
 	<ae:configuration>
-		<databases default="pdo_mysql_main">
+		<databases default="d2">
 			
-			<database name="pdo_mysql_main" class="AgaviPdoDatabase">
-				<ae:parameter name="dsn">mysql:host=localhost;dbname=agsmplapp</ae:parameter>
-				<ae:parameter name="username">root</ae:parameter>
-				<ae:parameter name="password"></ae:parameter>
-			</database>
-			
-			<database name="propelom" class="AgaviPropelDatabase">
-				<ae:parameter name="config">%core.app_dir%/config/project-conf.php</ae:parameter>
+			<database name="d2" class="AgaviDoctrine2ormDatabase">
+				<ae:parameter name="configuration">
+					<ae:parameter name="metadata_driver_impl_argument">%core.model_dir%</ae:parameter>
+				</ae:parameter>
 			</database>
 			
 		</databases>
 	</ae:configuration>
 	
-	<ae:configuration environment="development-joecool">
-		<databases default="pdo_mysql_main">
+	<ae:configuration environment="development-david">
+		<databases default="d2">
 			
-			<database name="pdo_mysql_main">
-				<ae:parameter name="dsn">mysql:host=localhost;dbname=agavisample</ae:parameter>
-				<ae:parameter name="username">agavisample</ae:parameter>
-				<ae:parameter name="password">123qwe</ae:parameter>
+			<database name="d2" class="AgaviDoctrine2ormDatabase">
+				<ae:parameter name="connection">
+					<ae:parameter name="driver">pdo_sqlite</ae:parameter>
+					<ae:parameter name="path">%core.app_dir%/data/db.sqlite</ae:parameter>
+				</ae:parameter>
 			</database>
 			
 		</databases>

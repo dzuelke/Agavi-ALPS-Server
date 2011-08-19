@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ae:configurations xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" xmlns="http://agavi.org/agavi/config/parts/output_types/1.0">
 	
-	<ae:configuration>
+	<ae:configuration context="web">
 		
 		<output_types default="html">
 			
@@ -74,7 +74,7 @@
 		
 	</ae:configuration>
 	
-	<ae:configuration environment="production.*">
+	<ae:configuration context="web" environment="production.*">
 		
 		<output_types default="html">
 			
@@ -82,6 +82,14 @@
 			<!-- others are defined in settings.xml -->
 			<output_type name="html" exception_template="%core.template_dir%/exceptions/web-html.php" />
 			
+		</output_types>
+		
+	</ae:configuration>
+	
+	<ae:configuration context="doctrine-cli">
+		
+		<output_types default="text">
+			<output_type name="text" />
 		</output_types>
 		
 	</ae:configuration>

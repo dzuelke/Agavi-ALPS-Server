@@ -51,4 +51,15 @@
 		
 	</ae:configuration>
 	
+	<ae:configuration context="doctrine-cli">
+		<request class="AgaviConsoleRequest">
+			<!-- the important bit: don't clear argc and argv -->
+			<ae:parameter name="unset_input">false</ae:parameter>
+		</request>
+		<response class="AgaviConsoleResponse" />
+		<routing class="AgaviConsoleRouting" />
+		<storage class="AgaviNullStorage" />
+		<user class="AgaviSecurityUser" />
+	</ae:configuration>
+	
 </ae:configurations>
